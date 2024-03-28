@@ -1,279 +1,336 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-*{
-    margin: 0;
-    padding: 0;
-    font-style: normal;
-    text-decoration: none;
-	font-weight: 100;
-	font-size: 14px;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-header{
-	background: #151515;
-}
-.top-bar{ width: 100%; height: auto; background: #151515; color: #fff; padding: 10px 0; }
-svg.bi.bi{
-    margin-inline: 3px;
+header {
+  background: #151515;
 }
 
-.top-bar .container .row{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10% 0.3% 10%;
+.top-bar {
+  width: 100%;
+  height: auto;
+  background: #151515;
+  color: #fff;
+  padding: 10px 0;
 }
-.social-media-icons{
-	align-content: center;
+
+svg.bi.bi {
+  margin-inline: 3px;
+}
+
+.top-bar .container .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10% 0.3% 10%;
+}
+.social-media-icons {
+  align-content: center;
 }
 
 /*Menu*/
-.menu-area{display:flex; justify-content: space-between; padding: 0 10% 0.3% 10%; background: #151515;}
-
-nav.main-menu{
-	padding-top: 15px;
-}
-.main-menu ul{ padding: 0; margin: 0; float: left;}
-.main-menu ul li{ display: inline; margin: 0 30px 0 0; position: relative; text-align: start;}
-.main-menu ul li a{ padding: 0 15px 25px 0 ; color: #fff; text-decoration: none;
-position: relative; 
+.menu-area {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10% 0.3% 10%;
+  background: #151515;
 }
 
-.main-menu ul li:before{
-	content:"";
-	position: absolute;
-	width: 80%;
-	height: 1px;
-	bottom: 0;
-	left: 0;
-	background-color: #fff;
-	visibility: hidden;
-	-webkit-transform: scaleX(0);
-	transform: scaleX(0);
-	-webkit-transition: all 0.3s ease-in-out 0s;
-	transition: all 0.3s ease-in-out 0s;
+nav.main-menu {
+  padding-top: 15px;
+}
+.main-menu ul {
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+.main-menu ul li {
+  display: inline;
+  margin: 0 30px 0 0;
+  position: relative;
+  text-align: start;
+}
+.main-menu ul li a {
+  padding: 0 15px 25px 0;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+.main-menu ul li:before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .main-menu ul li:hover:before {
-	visibility: visible;
-	-webkit-transform: scaleX(1);
-	transform: scaleX(1);
-  }
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
 
 /*============Submenu*/
-.main-menu ul li ul{background-color: #313131; border-radius: 5px; margin-top: 12px;
-    padding: 5px 2px 15px 10px; } 
-.main-menu ul li ul li{float: left; padding: 7px; display:block; width:200px;} 
-
-.sub-menu{
-    position:absolute;
-    left:0;
-
-    display: none;
+.main-menu ul li ul {
+  background-color: #313131;
+  border-radius: 5px;
+  margin-top: 12px;
+  padding: 5px 2px 15px 10px;
 }
-.main-menu li:hover ul{display:block;}
+.main-menu ul li ul li {
+  float: left;
+  padding: 7px;
+  display: block;
+  width: 200px;
+}
 
+.sub-menu {
+  position: absolute;
+  left: 0;
+
+  display: none;
+}
+.main-menu li:hover ul {
+  display: block;
+}
 
 /*=========search*/
-.Search-section{
-    padding: 0 0 10px 0;
+.Search-section {
+  padding: 0 0 10px 0;
 }
 
 .webdesigntuts-workshop:before,
 .webdesigntuts-workshop:after {
-	display: block;	
-	height: 1px;
-	left: 50%;
-	margin: 0 0 0 -400px;
-	position: absolute;
-	width: 800px;
+  display: block;
+  height: 1px;
+  left: 50%;
+  margin: 0 0 0 -400px;
+  position: absolute;
+  width: 800px;
 }
 
 .webdesigntuts-workshop:before {
-	background: #444;
-	background: linear-gradient(left, #151515, #444, #151515);
-	top: 192px;
+  background: #444;
+  background: linear-gradient(left, #151515, #444, #151515);
+  top: 192px;
 }
 
 .webdesigntuts-workshop:after {
-	background: #000;
-	background: linear-gradient(left, #151515, #000, #151515);	
-	top: 191px;
+  background: #000;
+  background: linear-gradient(left, #151515, #000, #151515);
+  top: 191px;
 }
 
 .webdesigntuts-workshop form {
-	display: inline-block;
+  display: inline-block;
 }
 
 .webdesigntuts-workshop input {
-	background: #222;	
-	background: linear-gradient(#333, #222);	
-	border: 1px solid #444;
-	border-radius: 5px 0 0 5px;
-	box-shadow: 0 2px 0 #000;
-	color: #888;
-	display: block;
-	float: left;
-	font-family: 'Cabin', helvetica, arial, sans-serif;
-	font-size: 13px;
-	font-weight: 400;
-	height: 40px;
-	margin: 0;
-	padding: 0 10px;
-	text-shadow: 0 -1px 0 #000;
-	width: 300px;
+  background: #222;
+  background: linear-gradient(#333, #222);
+  border: 1px solid #444;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0 2px 0 #000;
+  color: #888;
+  display: block;
+  float: left;
+  font-family: "Cabin", helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  text-shadow: 0 -1px 0 #000;
+  width: 300px;
 }
 
 .ie .webdesigntuts-workshop input {
-	line-height: 40px;
+  line-height: 40px;
 }
 
 .webdesigntuts-workshop input::-webkit-input-placeholder {
-   color: #888;
+  color: #888;
 }
 
 .webdesigntuts-workshop input:-moz-placeholder {
-   color: #888;
+  color: #888;
 }
 
 .webdesigntuts-workshop input:focus {
-	animation: glow 800ms ease-out infinite alternate;
-	background: #292622;
-	background: linear-gradient(#393833, #292722);
-	border-color: rgb(153, 136, 51);
-	box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
-	color: #efe;
-	outline: none;
+  animation: glow 800ms ease-out infinite alternate;
+  background: #292622;
+  background: linear-gradient(#393833, #292722);
+  border-color: rgb(153, 136, 51);
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1),
+    0 2px 0 #000;
+  color: #efe;
+  outline: none;
 }
 
-.webdesigntuts-workshop input:focus::-webkit-input-placeholder { 
-	color: #efe;
+.webdesigntuts-workshop input:focus::-webkit-input-placeholder {
+  color: #efe;
 }
 
 .webdesigntuts-workshop input:focus:-moz-placeholder {
-	color: #efe;
+  color: #efe;
 }
 
 .webdesigntuts-workshop .search-submit {
-	background: #222;
-	background: linear-gradient(#333, #222);
-	box-sizing: border-box;
-	border: 1px solid #444;
-	border-left-color: #000;
-	border-radius: 0 5px 5px 0;
-	box-shadow: 0 2px 0 #000;
-	color: #fff;
-	display: block;
-	float: left;
-	font-family: 'Cabin', helvetica, arial, sans-serif;
-	font-size: 13px;
-	font-weight: 400;
-	height: 40px;
-	line-height: 40px;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	text-shadow: 0 -1px 0 #000;
-	width: 80px;
-}	
+  background: #222;
+  background: linear-gradient(#333, #222);
+  box-sizing: border-box;
+  border: 1px solid #444;
+  border-left-color: #000;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0 2px 0 #000;
+  color: #fff;
+  display: block;
+  float: left;
+  font-family: "Cabin", helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-shadow: 0 -1px 0 #000;
+  width: 80px;
+}
 
 .webdesigntuts-workshop .search-submit:hover,
 .webdesigntuts-workshop .search-submit:focus {
-	background: #292929;
-	background: linear-gradient(#393939, #292929);
-	color: rgb(255, 181, 85);
-	outline: none;
+  background: #292929;
+  background: linear-gradient(#393939, #292929);
+  color: rgb(255, 181, 85);
+  outline: none;
 }
 
 .webdesigntuts-workshop .search-submit:active {
-	background: #292929;
-	background: linear-gradient(#393939, #292929);
-	box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
-	top: 1px;
+  background: #292929;
+  background: linear-gradient(#393939, #292929);
+  box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
+  top: 1px;
 }
 
 @keyframes glow {
-    0% {
-		border-color: rgb(153, 129, 51);
-		box-shadow: 0 0 5px rgba(255, 187, 0, 0.2), inset 0 0 5px rgba(255, 166, 0, 0.1), 0 2px 0 #000;
-    }	
-    100% {
-		border-color: rgb(255, 199, 102);
-		box-shadow: 0 0 20px rgba(255, 204, 0, 0.6), inset 0 0 10px rgba(255, 213, 0, 0.4), 0 2px 0 #000;
-    }
+  0% {
+    border-color: rgb(153, 129, 51);
+    box-shadow: 0 0 5px rgba(255, 187, 0, 0.2),
+      inset 0 0 5px rgba(255, 166, 0, 0.1), 0 2px 0 #000;
+  }
+  100% {
+    border-color: rgb(255, 199, 102);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.6),
+      inset 0 0 10px rgba(255, 213, 0, 0.4), 0 2px 0 #000;
+  }
 }
-
 
 /*Menu Mobile*/
 .mobile-menu {
-    display: none; /* Inicialmente, o menu móvel não é exibido */
-    position: fixed; /* Posicionamento absoluto para sobrepor o conteúdo existente */
-    top: 0; /* Ajuste a altura conforme necessário */
-    left: 0;
-    background-color: #212121; /* Cor de fundo do menu */
-    box-shadow: 0 2px 4px #e1b8954b; /* Sombra para efeito visual */
-    z-index: 1000; /* Garante que o menu esteja acima de outros elementos */
-    width: 50%; /* Largura total */
-	height: 100vh;
-    padding: 20px; /* Espaçamento interno */
-	overflow-y: auto; /* Adicionando rolagem vertical apenas quando necessário */
-	
+  display: none; /* Inicialmente, o menu móvel não é exibido */
+  position: fixed; /* Posicionamento absoluto para sobrepor o conteúdo existente */
+  top: 0; /* Ajuste a altura conforme necessário */
+  left: 0;
+  background-color: #212121; /* Cor de fundo do menu */
+  box-shadow: 0 2px 4px #e1b8954b; /* Sombra para efeito visual */
+  z-index: 1000; /* Garante que o menu esteja acima de outros elementos */
+  width: 50%; /* Largura total */
+  height: 100vh;
+  padding: 20px; /* Espaçamento interno */
+  overflow-y: auto; /* Adicionando rolagem vertical apenas quando necessário */
 }
 
 .mobile-menu.open {
-    display: block; /* Se a classe 'open' for adicionada, o menu móvel será exibido */
+  display: block; /* Se a classe 'open' for adicionada, o menu móvel será exibido */
 }
 
-.mobile-menu.open a{
-	text-decoration: none;
-    display: block; /* Se a classe 'open' for adicionada, o menu móvel será exibido */
-	color: white;
-	padding: 12px;
+.mobile-menu.open a {
+  text-decoration: none;
+  display: block; /* Se a classe 'open' for adicionada, o menu móvel será exibido */
+  color: white;
+  padding: 12px;
 }
 
-.menu-area button{
-	display: none;
+.menu-area button {
+  display: none;
 }
 
 @media (max-width: 1283px) {
+  .main-menu {
+    display: none;
+  }
 
-	.main-menu{
-		display: none;
-	}
+  .menu-area .linha {
+    width: 30px;
+    height: 3px;
+    background-color: #ccc;
+    display: block;
+    margin: 3px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.2s;
+  }
 
-	.menu-area .linha{
-		width: 30px;
-		height: 3px;
-		background-color: #ccc;
-		display: block;
-		margin: 3px auto;
-		position: relative;
-		transform-origin: center;
-		transition: 0.2s;
-	}
-	
-	.menu-area button{
-		display: block;
-		width: 50px;
-		height: 30px;
-		border: 2px solid #ccc;
-		border-radius: 10px;
-		background: transparent;
-		cursor: pointer;
-	}
+  .menu-area button {
+    display: block;
+    width: 50px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+  }
 
-	button.ativar{
-		border: 4px solid #ffb700
-	}
+  button.ativar {
+    border: 4px solid #ffb700;
+  }
 
-	button.ativar .linha:nth-child(1){
-		transform: translateY(6px) rotate(20deg);
-	}
-	
-	button.ativar .linha:nth-child(3){
-		transform: translateY(-6px) rotate(-20deg);
-	}
-	
-	button.ativar .linha:nth-child(2){
-		width: 0;
-	}
+  button.ativar .linha:nth-child(1) {
+    transform: translateY(6px) rotate(20deg);
+  }
+
+  button.ativar .linha:nth-child(3) {
+    transform: translateY(-6px) rotate(-20deg);
+  }
+
+  button.ativar .linha:nth-child(2) {
+    width: 0;
+  }
+}
+
+/*=====================Corpo======================*/
+.container-vazio {
+  width: auto;
+  height: 33vw;
+  align-content: center;
+}
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+/*=====================Foooter====================*/
+footer {
+  background-color: #151515;
+  color: white;
+  padding: 1.5% 10% 1.5% 10%;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
 }
