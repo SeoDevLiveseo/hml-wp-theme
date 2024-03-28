@@ -15,8 +15,7 @@ function liveseo_config(){
         )
     );
 }
-
-add_theme_support( 'custom-background' );
+/*custom removido */
 add_action('after_setup_theme', 'liveseo_config', 0);
 
 ?>
