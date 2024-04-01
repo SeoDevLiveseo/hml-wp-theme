@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 * {
   margin: 0;
-  padding: 0;
   font-style: normal;
   text-decoration: none;
   font-weight: 100;
@@ -22,8 +21,28 @@ header {
   padding: 10px 0;
 }
 
+img.header-image {
+  width: 90px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/*Icones do header*/
 svg.bi.bi {
   margin-inline: 3px;
+}
+
+.social-media-icons {
+  align-content: center;
+}
+
+a.customize-unpreviewable {
+  color: white;
+}
+
+.social-menu li.menu-item {
+  list-style-type: none;
+  display: inline;
 }
 
 .top-bar .container .row {
@@ -31,11 +50,8 @@ svg.bi.bi {
   justify-content: space-between;
   padding: 0 10% 0.3% 10%;
 }
-.social-media-icons {
-  align-content: center;
-}
 
-/*Menu*/
+/*=====================NavMenu======================*/
 .menu-area {
   display: flex;
   justify-content: space-between;
@@ -84,8 +100,9 @@ nav.main-menu {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+/*=====================Fim NavMenu======================*/
 
-/*============Submenu*/
+/*=====================Submenu======================*/
 .main-menu ul li ul {
   background-color: #313131;
   border-radius: 5px;
@@ -108,8 +125,10 @@ nav.main-menu {
 .main-menu li:hover ul {
   display: block;
 }
+/*=====================Fim Submenu======================*/
 
-/*=========search*/
+/*=====================Search======================*/
+
 .Search-section {
   padding: 0 0 10px 0;
 }
@@ -134,10 +153,6 @@ nav.main-menu {
   background: #000;
   background: linear-gradient(left, #151515, #000, #151515);
   top: 191px;
-}
-
-.webdesigntuts-workshop form {
-  display: inline-block;
 }
 
 .webdesigntuts-workshop input {
@@ -240,8 +255,9 @@ nav.main-menu {
       inset 0 0 10px rgba(255, 213, 0, 0.4), 0 2px 0 #000;
   }
 }
+/*=====================Fim Search======================*/
 
-/*Menu Mobile*/
+/*=====================NavMenu Mobile======================*/
 .mobile-menu {
   display: none; /* Inicialmente, o menu móvel não é exibido */
   position: fixed; /* Posicionamento absoluto para sobrepor o conteúdo existente */
@@ -254,6 +270,10 @@ nav.main-menu {
   height: 100vh;
   padding: 20px; /* Espaçamento interno */
   overflow-y: auto; /* Adicionando rolagem vertical apenas quando necessário */
+}
+
+.mobile-menu ul {
+  list-style-type: none;
 }
 
 .mobile-menu.open {
@@ -274,6 +294,10 @@ nav.main-menu {
 @media (max-width: 1283px) {
   .main-menu {
     display: none;
+  }
+
+  .menu-area {
+    padding: 0 10% 3% 10%;
   }
 
   .menu-area .linha {
@@ -313,8 +337,10 @@ nav.main-menu {
     width: 0;
   }
 }
+/*=====================Fim NavMenu Mobile======================*/
 
-/*=====================Corpo======================*/
+/*=====================body======================*/
+
 .container-vazio {
   width: auto;
   height: 33vw;
@@ -324,7 +350,9 @@ h1 {
   font-size: 24px;
   text-align: center;
 }
-/*=====================Foooter====================*/
+/*=====================Fim body======================*/
+
+/*=====================Footer====================*/
 footer {
   background-color: #151515;
   color: white;
@@ -334,3 +362,69 @@ footer .container {
   display: flex;
   justify-content: space-between;
 }
+/*=====================Fim Footer====================*/
+
+/*=====================Search Mobile======================*/
+.search-mobile {
+  display: none;
+}
+
+.search-form-mobile input.search-field {
+  color: rgb(188, 192, 188);
+  width: 300px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  padding: 10px;
+  background: #444;
+  background: linear-gradient(left, #151515, #444, #151515);
+}
+
+.search-form-mobile:after {
+  background: #444;
+  background: linear-gradient(left, #151515, #444, #151515);
+}
+
+.search-form-mobile input:focus {
+  animation: glow 800ms ease-out infinite alternate;
+  background: #292622;
+  background: linear-gradient(#393833, #292722);
+  border-color: rgb(153, 136, 51);
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1),
+    0 2px 0 #000;
+  color: #efe;
+  outline: none;
+}
+
+.search-form-mobile input:focus::-webkit-input-placeholder {
+  color: #efe;
+}
+
+.search-form-mobile input:focus:-moz-placeholder {
+  color: #efe;
+}
+
+.search-mobile svg {
+  color: white;
+}
+
+.search-form-mobile {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff00;
+  z-index: 9999;
+}
+
+@media (max-width: 1283px) {
+  .search-mobile {
+    display: block;
+  }
+
+  .Search-section {
+    display: none;
+  }
+}
+/*=====================Fim Search Mobile======================*/
