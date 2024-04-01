@@ -1,5 +1,5 @@
 <?php
-/*Carrega os scripts */
+/*load scripts */
 function load_scripts()
 {
     wp_enqueue_style('template', get_template_directory_uri() . '/css/template.css');
@@ -7,10 +7,10 @@ function load_scripts()
 
 add_action('wp_enqueue_scripts', 'load_scripts');
 
-/*Função configuração de tema */
+/*Theme configuration function */
 function liveseo_config()
 {
-    /*Registrando menu */
+    /*Register menu */
     register_nav_menus(
         array(
             'my_main_menu' => 'Main Menu',
@@ -70,6 +70,16 @@ function custom_social_links_customize_register($wp_customize)
     ));
     $wp_customize->add_control('linkedin_url', array(
         'label' => __('LinkedIn URL', 'text_domain'),
+        'section' => 'custom_social_links_section',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('youtube_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    $wp_customize->add_control('youtube_url', array(
+        'label' => __('YouTube URL', 'text_domain'),
         'section' => 'custom_social_links_section',
         'type' => 'text',
     ));
