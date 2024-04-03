@@ -17,6 +17,7 @@ function liveseo_config()
             'footer_menu' => 'Footer Menu'
         )
     );
+
     add_theme_support('custom-header', array(
         //default image (empty to use none).
         'default-image'          => '',
@@ -30,6 +31,38 @@ function liveseo_config()
         'flex-height'            => false,
         'flex-width'             => false,
     ));
+
+    //add the matabox image
+    add_theme_support('post-thumbnails');
+}
+
+//walker
+class AWP_Menu_Walker extends Walker_Nav_Menu
+{
+    function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
+    {
+        $output .= "<li class='" .  implode(" ", $item->classes) . "'>";
+
+        if ($item->url && $item->url != '#') {
+            $output .= '<a href="' . $item->url . '">';
+        } else {
+            $output .= '<span>';
+        }
+
+        $output .= $item->title;
+
+
+
+        if ($item->url && $item->url != '#') {
+            $output .= '</a>';
+        } else {
+            $output .= '</span>';
+        }
+
+        if ($args->walker->has_children) {
+            $output .= '<i class="caret fa fa-angle-down"></i>';
+        }
+    }
 }
 
 add_action('after_setup_theme', 'liveseo_config', 0);

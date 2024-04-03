@@ -89,16 +89,41 @@
 
                 // Adiciona um ouvinte de evento de clique ao documento inteiro
                 document.addEventListener('click', fecharMenuFora);
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    var menuItems = document.querySelectorAll('.menu-item-has-children');
+
+                    menuItems.forEach(function(menuItem) {
+                        menuItem.addEventListener('click', function() {
+                            var submenu = this.querySelector('.menu-hamburger > nav > ul > li > ul.sub-menu');
+                            if (submenu) {
+                                submenu.style.display = 'flex';
+                            }
+
+                            event.stopPropagation();
+                        });
+                    });
+
+                    document.addEventListener('click', function(event) {
+                        var submenus = document.querySelectorAll('.menu-hamburger > nav > ul > li > ul.sub-menu');
+                        submenus.forEach(function(submenu) {
+                            submenu.style.display = 'none'
+                        });
+                    });
+
+                });
             </script>
             <nav class="mobile-menu">
                 <div class="mob-menu">
                     <div class="menu-hamburger">
                         <?php
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'my_main_menu'
-                            )
-                        );
+                        wp_nav_menu([
+                            'theme_location' => 'my_main_menu',
+                            'menu_class' => 'main-menu-click',
+                            'container' => 'nav',
+                            'container_class' => 'header__main-nav',
+                            'walker' => new AWP_Menu_Walker()
+                        ]);
                         ?>
                     </div>
                 </div>
@@ -149,9 +174,6 @@
             </script>
         </section>
     </header>
-    <div class="container-vazio">
-        <h1>Seu Conteúdo aqui!</h1>
-    </div>
 </body>
 
 </html>

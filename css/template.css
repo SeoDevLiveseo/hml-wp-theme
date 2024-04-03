@@ -116,14 +116,55 @@ nav.main-menu {
   width: 200px;
 }
 
-.sub-menu {
+.main-menu .sub-menu {
   position: absolute;
   left: 0;
 
   display: none;
 }
+
 .main-menu li:hover ul {
   display: block;
+}
+
+.main-menu ul li:hover::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2px; /* Ajuste a posição conforme necessário */
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #ffffff; /* Cor da seta */
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1283px) {
+  .mob-menu .menu-hamburger .header__main-nav > ul > li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mob-menu .menu-hamburger .header__main-nav > ul {
+    margin: 0 0 0 -40px;
+  }
+
+  .mob-menu .menu-hamburger .sub-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mob-menu .menu-hamburger .header__main-nav > ul > li > i {
+    display: flex;
+    border-top: double;
+    border-color: #ff9e00;
+    color: white;
+    align-items: center;
+    border-radius: 50px;
+    padding: 0 10px 0 10px;
+    margin: 10px 0 10px 0;
+  }
 }
 /*=====================Fim Submenu======================*/
 
@@ -340,20 +381,82 @@ nav.main-menu {
 /*=====================Fim NavMenu Mobile======================*/
 
 /*=====================body======================*/
-
-.container-vazio {
-  width: auto;
-  height: 33vw;
-  align-content: center;
+.middle-area .container {
+  background-color: rgb(238, 238, 238);
 }
-h1 {
-  font-size: 24px;
-  text-align: center;
+.middle-area .container .row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 5% 10% 4% 10%;
+}
+
+.destaque {
+  grid-column: span 3; /* Ocupa duas colunas na grade */
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.articles-grid article {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.destaque article img.attachment-post-thumbnail {
+  width: 50%;
+  height: 250px;
+}
+
+article img.attachment-post-thumbnail {
+  width: 246px;
+  height: 180px;
+}
+
+.sidebar {
+  background-color: #ecd2b5;
+}
+
+/* Estilos para telas menores que 768px (tamanho comum de telas de dispositivos móveis) */
+@media only screen and (max-width: 768px) {
+  .middle-area .container .row {
+    grid-template-columns: 1fr; /* Uma única coluna */
+    padding: 5% 5% 4% 5%; /* Ajuste as margens conforme necessário */
+  }
+
+  .destaque {
+    grid-column: span 1; /* Volta para ocupar uma única coluna */
+  }
+
+  .articles-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Ajuste o tamanho das colunas conforme necessário */
+  }
+
+  .destaque article img.attachment-post-thumbnail {
+    width: 100%; /* Imagem ocupa toda a largura da coluna */
+    height: auto; /* Altura ajustável automaticamente */
+  }
+
+  article img.attachment-post-thumbnail {
+    width: 100%; /* Imagem ocupa toda a largura da coluna */
+    height: auto; /* Altura ajustável automaticamente */
+  }
+
+  .sidebar {
+    display: none; /* Oculta a barra lateral em telas menores para evitar a sobrecarga de conteúdo */
+  }
 }
 /*=====================Fim body======================*/
 
 /*=====================Footer====================*/
 footer {
+  height: auto;
   background-color: #151515;
   color: white;
   padding: 1.5% 10% 1.5% 10%;
